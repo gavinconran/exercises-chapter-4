@@ -1,4 +1,4 @@
-"""This file contains the class Game for Ex 4.3 of OOP4Maths."""
+"""Contains the class Game for Ex 4.3 of OOP4Maths."""
 
 import numpy as np
 from matplotlib import pyplot
@@ -50,7 +50,7 @@ class Game:
     """The game class reprents a circle."""
 
     def __init__(self, size):
-        """Game class constructor method."""        
+        """Game class constructor method."""
         self.board = np.zeros((size, size))
 
     def play(self):
@@ -69,8 +69,8 @@ class Game:
         for i in range(self.board.shape[0]):
             for j in range(self.board.shape[1]):
                 self.board[i, j] = 1 \
-                    if (neighbour_count[i, j] == 3 or
-                        (neighbour_count[i, j] == 2 and
+                    if (neighbour_count[i, j] == 3 or 
+                        (neighbour_count[i, j] == 2 and 
                          self.board[i, j])) else 0
 
     def __setitem__(self, key, value):
