@@ -1,4 +1,4 @@
-"""Contains the class Game for Ex 4.3 of OOP4Maths."""
+"""Contains the class Game for Ex 4.3-5 of OOP4Maths."""
 
 import numpy as np
 from matplotlib import pyplot
@@ -47,7 +47,7 @@ glider_gun = np.array([
 
 
 class Game:
-    """The game class reprents a circle."""
+    """The Game class reprents a circle."""
 
     def __init__(self, size):
         """Game class constructor method."""
