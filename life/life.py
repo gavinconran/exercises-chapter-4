@@ -71,7 +71,7 @@ class Game:
                 self.board[i, j] = 1 \
                     if (neighbour_count[i, j] == 3
                         or (neighbour_count[i, j] == 2
-                        and  self.board[i, j])) else 0
+                        and self.board[i, j])) else 0
 
     def __setitem__(self, key, value):
         """Set an item."""
