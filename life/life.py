@@ -65,17 +65,16 @@ class Pattern:
         """Return transpose of self."""
         return Pattern(np.matrix.transpose(self.grid))
 
+    def rotate_once(self):
+        """Return self rotated thru 1 right angles anticlock."""
+        return Pattern(self.flip_horizontal().flip_diag().grid)
+
     def rotate(self, n):
         """Return self rotated thru n right angles anticlock."""
-        if n == 1:
-            return Pattern(self.flip_horizontal().flip_diag().grid)
-        elif n == 2:
-            return Pattern(self.flip_horizontal().flip_diag()
-                           .flip_horizontal().flip_diag().grid)
-        else:
-            return Pattern(self.flip_horizontal().flip_diag()
-                           .flip_horizontal().flip_diag()
-                           .flip_horizontal().flip_diag().grid)
+        rotated_pattern = self
+        for i in np.arange(n):
+            rotated_pattern = rotated_pattern.rotate_once()
+        return rotated_pattern
 
 
 class Game:
