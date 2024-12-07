@@ -55,15 +55,15 @@ class Pattern:
 
     def flip_vertical(self):
         """Return new Pattern whose rows are in reversed order."""
-        return np.flipud(self)
+        return np.flipud(self.grid)
 
     def flip_horizontal(self):
         """Return Pattern whose columns are in reversed order."""
-        return np.flip(self, 1)
+        return np.flip(self.grid, 1)
 
     def flip_diag(self):
         """Return transpose of self."""
-        return np.matrix.transpose(self)
+        return np.matrix.transpose(self.grid)
 
     def rotate(self, n):
         """Return self rotated thru n right angles anticlock."""
