@@ -59,7 +59,7 @@ class Pattern:
 
     def flip_horizontal(self):
         """Return Pattern whose columns are in reversed order."""
-        return np.flipir(self)
+        return np.flip(self, 1)
 
     def flip_diag(self):
         """Return transpose of self."""
