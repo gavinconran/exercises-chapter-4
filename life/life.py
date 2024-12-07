@@ -74,8 +74,8 @@ class Pattern:
                            .flip_horizontal().flip_diag().grid)
         else:
             return Pattern(self.flip_horizontal().flip_diag()
-                            .flip_horizontal().flip_diag()
-                            .flip_horizontal().flip_diag().grid)
+                           .flip_horizontal().flip_diag()
+                           .flip_horizontal().flip_diag().grid)
 
 
 class Game:
