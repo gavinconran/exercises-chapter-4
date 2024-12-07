@@ -71,10 +71,9 @@ class Pattern:
 
     def rotate(self, n):
         """Return self rotated thru n right angles anticlock."""
-        rotated_pattern = self
         for i in np.arange(n):
-            rotated_pattern = rotated_pattern.rotate_once()
-        return rotated_pattern
+            self = self.rotate_once()
+        return self
 
 
 class Game:
