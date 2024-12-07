@@ -71,12 +71,11 @@ class Pattern:
             return Pattern(self.flip_horizontal().flip_diag().grid)
         elif n == 2:
             return Pattern(self.flip_horizontal().flip_diag()
-                           .flip_horizontal().flip_diag().grid)    
+                           .flip_horizontal().flip_diag().grid)
         else:
             return Pattern(self.flip_horizontal().flip_diag()
-            .flip_horizontal().flip_diag()
-            .flip_horizontal().flip_diag().grid)
-        
+                            .flip_horizontal().flip_diag()
+                            .flip_horizontal().flip_diag().grid)
 
 
 class Game:
