@@ -65,14 +65,14 @@ class Pattern:
         """Return transpose of self."""
         return Pattern(np.matrix.transpose(self.grid))
 
-    def rotate_once(self):
+    def _rotate_once(self):
         """Return self rotated thru 1 right angles anticlock."""
         return Pattern(self.flip_horizontal().flip_diag().grid)
 
     def rotate(self, n):
         """Return self rotated thru n right angles anticlock."""
         for i in np.arange(n):
-            self = self.rotate_once()
+            self = self._rotate_once()
         return self
 
 
