@@ -46,6 +46,30 @@ glider_gun = np.array([
 ])
 
 
+class Pattern:
+    """The Pattern class reprents a pattern in a Game."""
+
+    def __init__(self, pattern):
+        """Pattern class constructor method."""
+        self.grid = pattern
+
+    def flip_vertical(self):
+        """Returns a new Pattern whose rows are in reversed order."""
+        return np.flip(self, 0)
+
+    def flip_horizontal(self):
+        """Returns a new Pattern whose columns are in reversed order."""
+        return np.flip(self, 1)
+
+    def flip_diag(self):
+        """Returns a new Pattern which is the transpose of self."""
+        return np.matrix.transpose(self, 1)
+
+    def rotate(self, n):
+        """Returns a new Pattern which is self rotated thru n right angles anticlockwise."""
+        return self
+
+
 class Game:
     """The Game class reprents a circle."""
 
