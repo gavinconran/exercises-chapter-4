@@ -112,3 +112,10 @@ class Game:
         pyplot.clf()
         pyplot.matshow(self.board, fignum=0, cmap='binary')
         pyplot.show()
+
+    def insert(self, pattern, centre):
+        """Insert a Pattern in the Game."""
+        for i in range(pattern.grid.shape[0]):
+            for j in range(pattern.grid.shape[1]):
+                self.board[centre[0] + i - 1, centre[1] + j - 1] \
+                = pattern.grid[i, j]
