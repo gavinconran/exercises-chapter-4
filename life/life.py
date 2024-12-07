@@ -117,5 +117,8 @@ class Game:
         """Insert a Pattern in the Game."""
         for i in range(pattern.grid.shape[0]):
             for j in range(pattern.grid.shape[1]):
+                # -1 included in both board indices
+                # because the centre of a glider is +1 
+                # in both x a ny direction
                 self.board[centre[0] + i - 1, centre[1] + j - 1] \
                     = pattern.grid[i, j]
