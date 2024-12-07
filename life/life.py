@@ -63,7 +63,7 @@ class Pattern:
 
     def flip_diag(self):
         """Return transpose of self."""
-        return np.matrix.transpose(self, 1)
+        return np.matrix.transpose(self)
 
     def rotate(self, n):
         """Return self rotated thru n right angles anticlock."""
